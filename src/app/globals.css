@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+/*
+  Design tokens. Source of truth: DESIGN.md.
+  Values marked "provisional" come from the current Framer site and will be
+  revised once the visual direction is closed. Never use raw values in
+  components: add or change a token here instead.
+*/
+
+:root {
+  /* Color (provisional, from Framer) */
+  --color-bg: #000000;
+  --color-surface: #0d0d0d;
+  --color-fg: rgb(255 255 255 / 0.92);
+  --color-fg-secondary: rgb(255 255 255 / 0.8);
+  --color-fg-muted: rgb(255 255 255 / 0.6);
+  --color-fg-subtle: rgb(255 255 255 / 0.54);
+  --color-border: rgb(255 255 255 / 0.1);
+  --color-accent: #6d8dff;
+
+  /* Layout */
+  --container-max: 1200px;
+  --gutter: 24px;
+
+  /* Radius */
+  --radius-card: 14px;
+  --radius-pill: 999px;
+
+  /* Motion (provisional) */
+  --duration-fast: 150ms;
+  --duration-base: 240ms;
+  --duration-slow: 600ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (min-width: 810px) {
+  :root {
+    --gutter: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  :root {
+    --gutter: 80px;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-fg: var(--color-fg);
+  --color-fg-secondary: var(--color-fg-secondary);
+  --color-fg-muted: var(--color-fg-muted);
+  --color-fg-subtle: var(--color-fg-subtle);
+  --color-border: var(--color-border);
+  --color-accent: var(--color-accent);
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, monospace;
+  --radius-card: var(--radius-card);
+  --radius-pill: var(--radius-pill);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
