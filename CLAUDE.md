@@ -30,6 +30,7 @@ Design Engineer anchored in product and UI. "A designer who builds", never "a de
 - Human, natural voice. No AI-sounding phrasing, no grand openings, no artificial symmetry (avoid rule-of-three lists and tidy closing lines).
 - Never invent numbers or results. Metrics come only from the owner's real case data.
 - English is the primary language; Portuguese comes later as a secondary locale.
+- Albertine is a man. Use he/him in English and masculine forms in Portuguese ("um product designer", "ele").
 
 ## Stack
 - Next.js (App Router) + TypeScript, Tailwind CSS v4 reading CSS variable tokens
